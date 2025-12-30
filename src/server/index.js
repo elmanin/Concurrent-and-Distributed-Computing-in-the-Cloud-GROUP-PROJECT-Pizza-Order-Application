@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const peopleRouter = require("../app/people/people.controller");
 const pizzasPlacesRouter = require("../app/pizzaPlaces/pizzasPlaces.controller");
