@@ -5,7 +5,7 @@ const options = {
   user: "admin",
   password: process.env.DB_PASSWORD || "password",
   database: "pizzeria",
-  port: 3308,
+  port: 3306, //Mine is 3308 but amazon's 3306
 };
 
 class DBConnector {
