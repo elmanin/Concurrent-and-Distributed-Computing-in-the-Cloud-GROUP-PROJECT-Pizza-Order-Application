@@ -1,11 +1,11 @@
 const mariadb = require("mariadb");
 
 const options = {
-  host: "localhost",
-  user: "admin",
+  host: process.env.DB_HOST || "localhost",
+  user: process.env.DB_USER || "admin",
   password: process.env.DB_PASSWORD || "password",
-  database: "pizzeria",
-  port: 3306, //Mine is 3308 but amazon's 3306
+  database: process.env.DB_NAME || "pizzeria",
+  port: process.env.DB_PORT || 3306, //Mine is 3308 but amazon's 3306
 };
 
 class DBConnector {
