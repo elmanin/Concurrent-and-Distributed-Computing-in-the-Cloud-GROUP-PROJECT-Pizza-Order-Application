@@ -1,0 +1,660 @@
+{
+	"info": {
+		"_postman_id": "5b2225d7-db32-428c-8708-4249142eefa5",
+		"name": "ConcurrencyFinalProject Collection",
+		"description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "51116745",
+		"_collection_link": "https://elmanin-800017.postman.co/workspace/Someone's-Workspace~300b00af-90f0-42de-8ead-2e68760ac9c9/collection/51116745-5b2225d7-db32-428c-8708-4249142eefa5?action=share&source=collection_link&creator=51116745"
+	},
+	"item": [
+		{
+			"name": "ManagerSignup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"manager4@pizzeria.com\",\r\n  \"password\": \"password123\",\r\n  \"name\": \"Manager\",\r\n  \"lastname\": \"Admin\",\r\n  \"role\": \"manager\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://private-alb-1487979075.eu-west-2.elb.amazonaws.com/api/people/signup",
+					"protocol": "http",
+					"host": [
+						"private-alb-1487979075",
+						"eu-west-2",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"api",
+						"people",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CookSignup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"cook2@pizzeria.com\",\r\n  \"password\": \"password123\",\r\n  \"name\": \"Marco\",\r\n  \"lastname\": \"Chef\",\r\n  \"role\": \"cook\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://private-alb-1487979075.eu-west-2.elb.amazonaws.com/api/people/signup",
+					"protocol": "http",
+					"host": [
+						"private-alb-1487979075",
+						"eu-west-2",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"api",
+						"people",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CustomerSignup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"customer2@test.com\",\r\n  \"password\": \"password123\",\r\n  \"name\": \"Juan\",\r\n  \"lastname\": \"Customer\",\r\n  \"role\": \"customer\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://private-alb-1487979075.eu-west-2.elb.amazonaws.com/api/people/signup",
+					"protocol": "http",
+					"host": [
+						"private-alb-1487979075",
+						"eu-west-2",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"api",
+						"people",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ManagerSignIn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"manager5@pizzeria.com\",\r\n    \"password\":\"password123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://private-alb-1487979075.eu-west-2.elb.amazonaws.com/api/people/login",
+					"protocol": "http",
+					"host": [
+						"private-alb-1487979075",
+						"eu-west-2",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"api",
+						"people",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CookSignIn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"cook2@pizzeria.com\",\r\n    \"password\":\"password123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://private-alb-1487979075.eu-west-2.elb.amazonaws.com/api/people/login",
+					"protocol": "http",
+					"host": [
+						"private-alb-1487979075",
+						"eu-west-2",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"api",
+						"people",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CustomerSignIn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"customer2@test.com\",\r\n    \"password\":\"password123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://private-alb-1487979075.eu-west-2.elb.amazonaws.com/api/people/login",
+					"protocol": "http",
+					"host": [
+						"private-alb-1487979075",
+						"eu-west-2",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"api",
+						"people",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ManagerCreatePizzaPlace",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{MANAGER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Pizzeria Test\",\r\n  \"address\": \"Test Street 123\",\r\n  \"city\": \"Madrid\",\r\n  \"phone\": \"+34-900-123-456\",\r\n  \"email\": \"test@pizzeria.com\",\r\n  \"manager_email\": \"manager@pizzeria.com\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://private-alb-1487979075.eu-west-2.elb.amazonaws.com/api/pizzaPlaces/create",
+					"protocol": "http",
+					"host": [
+						"private-alb-1487979075",
+						"eu-west-2",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"api",
+						"pizzaPlaces",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ManagerCreateAssignsCook",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{MANAGER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"cook_email\": \"cook1@pizzeria.com\",\r\n  \"pizzaplace_id\": 1\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://private-alb-1487979075.eu-west-2.elb.amazonaws.com/api/cooks/create",
+					"protocol": "http",
+					"host": [
+						"private-alb-1487979075",
+						"eu-west-2",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"api",
+						"cooks",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ManagerCreateMenuItems",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{MANAGER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Margherita\",\r\n  \"price\": 12.50,\r\n  \"category\": \"pizza\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://private-alb-1487979075.eu-west-2.elb.amazonaws.com/api/pizzas/create",
+					"protocol": "http",
+					"host": [
+						"private-alb-1487979075",
+						"eu-west-2",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"api",
+						"pizzas",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ManagerViewsAllOrders",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{MANAGER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://private-alb-1487979075.eu-west-2.elb.amazonaws.com/api/orders/all",
+					"protocol": "http",
+					"host": [
+						"private-alb-1487979075",
+						"eu-west-2",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"api",
+						"orders",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CustomerCreatesOrder",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{CUSTOMER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"pizzaplace_id\": 1,\r\n  \"items\": [\r\n    {\r\n      \"pizza_id\": 1,\r\n      \"quantity\": 2\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://private-alb-1487979075.eu-west-2.elb.amazonaws.com/api/orders/create",
+					"protocol": "http",
+					"host": [
+						"private-alb-1487979075",
+						"eu-west-2",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"api",
+						"orders",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CustomerViewsOwnOrders",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{CUSTOMER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://private-alb-1487979075.eu-west-2.elb.amazonaws.com/api/orders/customer",
+					"protocol": "http",
+					"host": [
+						"private-alb-1487979075",
+						"eu-west-2",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"api",
+						"orders",
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CookViewsPendingOrders",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{COOK_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://private-alb-1487979075.eu-west-2.elb.amazonaws.com/api/orders/pending",
+					"protocol": "http",
+					"host": [
+						"private-alb-1487979075",
+						"eu-west-2",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"api",
+						"orders",
+						"pending"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CookDeliversOrder",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{COOK_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://private-alb-1487979075.eu-west-2.elb.amazonaws.com/api/orders/1/deliver",
+					"protocol": "http",
+					"host": [
+						"private-alb-1487979075",
+						"eu-west-2",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"api",
+						"orders",
+						"1",
+						"deliver"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CookViewsOwnOrderHistory",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{COOK_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://private-alb-1487979075.eu-west-2.elb.amazonaws.com/api/orders/cook",
+					"protocol": "http",
+					"host": [
+						"private-alb-1487979075",
+						"eu-west-2",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"api",
+						"orders",
+						"cook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AuthFailedTest",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{COOK_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://private-alb-1487979075.eu-west-2.elb.amazonaws.com/api/orders/all",
+					"protocol": "http",
+					"host": [
+						"private-alb-1487979075",
+						"eu-west-2",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"api",
+						"orders",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AuthFailedTest2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{CUSTOMER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://private-alb-1487979075.eu-west-2.elb.amazonaws.com/api/orders/pending",
+					"protocol": "http",
+					"host": [
+						"private-alb-1487979075",
+						"eu-west-2",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"api",
+						"orders",
+						"pending"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "healthcheck",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://private-alb-1487979075.eu-west-2.elb.amazonaws.com/healthCheck",
+					"protocol": "http",
+					"host": [
+						"private-alb-1487979075",
+						"eu-west-2",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"healthCheck"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "MANAGER_TOKEN",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "CUSTOMER_TOKEN",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "COOK_TOKEN",
+			"value": "",
+			"type": "default"
+		}
+	]
+}

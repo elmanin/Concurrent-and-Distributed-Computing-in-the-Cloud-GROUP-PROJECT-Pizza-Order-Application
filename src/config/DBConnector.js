@@ -5,7 +5,7 @@ const options = {
   user: process.env.DB_USER || "admin",
   password: process.env.DB_PASSWORD || "password",
   database: process.env.DB_NAME || "pizzeria",
-  port: process.env.DB_PORT || 3306, //Mine is 3308 but amazon's 3306
+  port: process.env.DB_PORT || 3306,
 };
 
 class DBConnector {
@@ -31,16 +31,16 @@ class DBConnector {
         console.log(err);
       });
   }
-  async performAsyncQuery(query) {
+async performAsyncQuery(query, params = []) {  // Optional (defaults to empty array) params to allow for prepared statements to be added
     let conn;
     try {
-      const conn = await this.dbconnector.getConnection(options);
-      return await conn.query(query);
+      const conn = await this.dbconnector.getConnection();
+      return await conn.query(query, params);    // Optional params to allow for prepared statements to be added
     } catch (err) {
       console.error(err);
       throw err;
     } finally {
-      if (conn) conn.end();
+      if (conn) conn.end().catch(err => console.error(err));
     }
   }
 }

@@ -60,6 +60,23 @@ async function handleGetPizzaPlaces(req, res) {
   }
 }
 
+async function handleGetPizzaPlaceById(req, res) {
+  try {
+    const token = req.getAuthorization?.().split(' ')[1];
+    if (!token) return res.sendStatus(401);
+    jwt.verify(token, key); // Auth check (role not restricted per requirements)
+    
+    if (!req.params.id) return res.sendStatus(417);
+    const pizzaPlace = await getPizzaPlaceById(req.params.id);
+    
+    if (!pizzaPlace.length) return res.status(404).json({ error: 'Pizza place not found' });
+    return res.json(pizzaPlace[0]); // Return first (single) result
+  } catch (err) {
+    console.error(err);
+    return res.status(500).json({ error: 'Internal Server Error' });
+  }
+}
+
 async function handleDeletePizzaPlace(req, res) {
   try {
     const token = req.get("Authorization")?.split(" ")[1];
@@ -81,5 +98,6 @@ async function handleDeletePizzaPlace(req, res) {
 module.exports = {
   handleCreatePizzaPlace,
   handleGetPizzaPlaces,
+  handleGetPizzaPlaceById,
   handleDeletePizzaPlace,
 };

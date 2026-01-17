@@ -32,7 +32,7 @@ async function getOrdersByCustomer(email) {
   }
 }
 
-async function getOrdersByPizzaPlace(pizzaplaceId) {
+async function getOrdersByPizzaPlaceDelivered(pizzaplaceId) {
   try {
     const connection = new DBConnector();
     const orders = await connection.performAsyncQuery(
@@ -45,7 +45,7 @@ async function getOrdersByPizzaPlace(pizzaplaceId) {
   }
 }
 
-async function getOrdersByPizzaPlace(pizzaplace_id) {
+async function getOrdersByPizzaPlacePending(pizzaplace_id) {
   try {
     const connection = new DBConnector();
     const orders = await connection.performAsyncQuery(
@@ -127,7 +127,8 @@ async function createTransaction(transactionData) {
 module.exports = {
   createOrder,
   getOrdersByCustomer,
-  getOrdersByPizzaPlace,
+  getOrdersByPizzaPlaceDelivered,
+  getOrdersByPizzaPlacePending,
   getOrdersByCook,
   getOrderById,
   updateOrderStatus,
